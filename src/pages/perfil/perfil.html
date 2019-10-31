@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{Perfil.usuario.username}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content id = "tudo" padding>
+  <h2>{{Perfil.usuario.first_name}} {{Perfil.usuario.last_name}}</h2><!--Mosta o nome do usuário-->
+  <h3>{{Perfil.usuario.email}}</h3><!--Mosta o email do usuário-->
+  <p>Posts:</p><!--Mosta a lista de posts do usuário-->
+    <div id = 'feed'>
+        <ion-list *ngFor="let Post of Posts"> 
+            <ion-item  id = "box">
+              <p>{{Post.conteudo}}</p>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

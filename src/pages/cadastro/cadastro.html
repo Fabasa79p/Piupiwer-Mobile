@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro Piupiwer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id = 'tudo'>
+
+  <form (ngSubmit)="efetuaCadastro()" #formulario="ngForm"> <!-- Formulário de cadastro -->
+      <ion-item>
+        <ion-label stacked>Nome:</ion-label>
+        <ion-input [(ngModel)]="nome" name="nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Sobrenome:</ion-label>
+        <ion-input [(ngModel)]="sobrenome" name="sobrenome"></ion-input>
+      </ion-item>
+  
+  
+      <ion-item>
+        <ion-label stacked>E-mail:</ion-label>
+        <ion-input [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Nome de Usuário:</ion-label>
+        <ion-input [(ngModel)]="user" name="user"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Senha:</ion-label>
+        <ion-input [(ngModel)]="senha" name="senha" type = "password"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label stacked>Confirmar Senha:</ion-label>
+          <ion-input [(ngModel)]="csenha" name="csenha" type = "password"></ion-input>
+      </ion-item>
+  </form>
+
+  <button ion-button block type = "submit" (click)="formulario.ngSubmit.emit()"> Cadastrar-se! </button>
+
+
+
+
+</ion-content>

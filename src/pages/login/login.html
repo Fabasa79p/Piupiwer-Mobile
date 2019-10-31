@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Piupiwer - Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id = "tudo">
+  <form (ngSubmit)="efetuaLogin()" #formulario="ngForm"> <!-- Formulário de Login -->
+    <ion-item> 
+      <ion-label staked>Usuário</ion-label>
+      <ion-input [(ngModel)] = "user" type = "text" name = "user"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label staked>Senha</ion-label>
+      <ion-input [(ngModel)] = "senha" type = "password" name = "senha"></ion-input>
+    </ion-item>
+    <button ion-button block type = "submit" > Entrar </button>
+  </form>
+    
+  <p>Ainda, não é usuário?<a (click) = "paraCadastro()"> Clique aqui!</a></p>
+</ion-content>
